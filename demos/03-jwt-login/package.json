@@ -1,0 +1,11 @@
+{
+  "name": "demo3-jwt-login",
+  "version": "1.0.0",
+  "description": "Demo3: 零依赖 JWT 无状态登录 + 篡改实验（零依赖）",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

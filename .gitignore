@@ -1,0 +1,23 @@
+# 依赖
+node_modules/
+package-lock.json
+
+# 日志与临时文件
+*.log
+npm-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# 编辑器/系统
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# 运行时产物
+*.pid
+coverage/
+dist/
+build/
+.tmp/

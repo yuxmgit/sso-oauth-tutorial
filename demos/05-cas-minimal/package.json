@@ -1,0 +1,11 @@
+{
+  "name": "demo5-cas-minimal",
+  "version": "1.0.0",
+  "description": "Demo5: CAS 单点登录最小实现（CAS服务器+两个应用，零依赖）",
+  "scripts": {
+    "start": "node run.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

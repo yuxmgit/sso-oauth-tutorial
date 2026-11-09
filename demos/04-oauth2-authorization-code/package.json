@@ -1,0 +1,11 @@
+{
+  "name": "demo4-oauth2-authorization-code",
+  "version": "1.0.0",
+  "description": "Demo4: 从零手写 OAuth2 授权码模式（授权服务器/资源服务器/客户端，零依赖）",
+  "scripts": {
+    "start": "node run.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

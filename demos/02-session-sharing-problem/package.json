@@ -1,0 +1,11 @@
+{
+  "name": "demo2-session-sharing-problem",
+  "version": "1.0.0",
+  "description": "Demo2: 双应用独立 Session，演示 Cookie 共享救不了 SSO（零依赖）",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

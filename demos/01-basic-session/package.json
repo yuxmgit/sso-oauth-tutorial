@@ -1,0 +1,11 @@
+{
+  "name": "demo1-basic-session",
+  "version": "1.0.0",
+  "description": "Demo1: Session + Cookie 单系统登录（零依赖）",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

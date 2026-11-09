@@ -1,0 +1,11 @@
+{
+  "name": "demo7-security-attacks-defense",
+  "version": "1.0.0",
+  "description": "Demo7: OAuth2 攻防靶场（登录CSRF/state/PKCE 对比实验，零依赖）",
+  "scripts": {
+    "start": "node run.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

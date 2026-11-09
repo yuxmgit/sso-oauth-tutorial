@@ -1,0 +1,11 @@
+{
+  "name": "demo6-oidc-id-token",
+  "version": "1.0.0",
+  "description": "Demo6: OIDC ID Token 签发与本地验签（零依赖）",
+  "scripts": {
+    "start": "node run.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
