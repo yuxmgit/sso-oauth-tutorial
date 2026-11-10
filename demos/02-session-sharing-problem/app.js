@@ -54,7 +54,11 @@ function createApp(name, port, color) {
           return;
         }
         const newSid = crypto.randomUUID();
-        sessions.set(newSid, { username: p.get('username'), loginAt: new Date().toISOString() });
+        sessions.set(newSid, {
+          username: p.get('username'),
+          nickname: user.nickname,
+          loginAt: new Date().toISOString(),
+        });
         res.setHeader('Set-Cookie', `sid=${newSid}; HttpOnly; Path=/`);
         res.statusCode = 302;
         res.setHeader('Location', '/profile');

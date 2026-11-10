@@ -149,5 +149,10 @@ if (!result.valid) return 401;
 - 关键安全点：redirect_uri 精确匹配、code 一次性、state 防 CSRF；
 - 双令牌设计：短 JWT + 长随机串。
 
+> 思考题：本章的 access_token 是 JWT 格式——那"OAuth"和"JWT"是什么关系？
+> OAuth 管流程、JWT 管格式，两者并不互斥。详细辨析见进阶专题
+> [第 10 章 JWT 与 OAuth 的区别](10-JWT与OAuth的区别.md)。
+
+
 
 

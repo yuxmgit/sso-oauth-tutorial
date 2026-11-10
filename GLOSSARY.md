@@ -36,6 +36,21 @@
 | 声明 | Claim | JWT 载荷里的一条信息（如 `sub`、`exp`） |
 | 过期时间 | exp (expiration) | 令牌失效的时间戳 |
 | 刷新令牌 | Refresh Token | 用来换新 Access Token 的长期令牌 |
+| JWS | JSON Web Signature | "签名版 JWT"，三段式，内容明文可见，只保证未被篡改 |
+| JWE | JSON Web Encryption | "加密版 JWT"，五段式，内容只有持有密钥的一方能读 |
+| CEK | Content Encryption Key | 一次性对称内容密钥，JWE 用它加密数据，再用 RSA 包裹传递 |
+| 混合加密 | Hybrid Encryption | 非对称算法送密钥 + 对称算法加密数据，JWE/HTTPS 都这么做 |
+| 算法标识 | alg / enc | JWE 头部两个必需字段：alg 管密钥怎么给，enc 管内容怎么加密 |
+| 认证标签 | Tag (AEAD) | GCM 等算法输出的完整性校验值，密文被改则解密失败 |
+| 附加认证数据 | AAD (Additional Authenticated Data) | 参与完整性校验但不加密的头部数据，防"换头攻击" |
+| 密钥编号 | kid (Key ID) | 头部里标记用哪把密钥，支持密钥轮换 |
+| 公钥 | Public Key | 非对称密钥对中可公开的那一半，用于加密或验签 |
+| 私钥 | Private Key | 非对称密钥对中必须保密的那一半，用于解密或签名 |
+| 对称密钥 | Symmetric Key | 加密和解密共用同一把钥匙，快但分发困难 |
+| 共享密钥 | Shared Secret | 双方事先约定同一把对称密钥（对应 JWE 的 `dir` 模式） |
+| 初始化向量 | IV (Initialization Vector) | 每次加密都要新的随机种子，同一密钥下绝不复用 |
+| 密钥轮换 | Key Rotation | 定期更换密钥，靠 `kid` 双钥并行实现平滑过渡 |
+| 密钥管理服务 | KMS (Key Management Service) | 托管密钥、提供加解密接口的服务，密钥本体不出门 |
 
 ## OAuth 相关
 

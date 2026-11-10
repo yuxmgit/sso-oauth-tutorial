@@ -1,0 +1,11 @@
+{
+  "name": "demo8-jwe-encrypted-token",
+  "version": "1.0.0",
+  "description": "Demo8: JWS 与 JWE 对比实验（零依赖，Node 内置 crypto 实现 RSA-OAEP-256 + A256GCM）",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

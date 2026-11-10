@@ -43,8 +43,8 @@ const server = http.createServer((req, res) => {
   const cookies = parseCookies(req.headers.cookie);
   const sid = cookies.sid;
 
-  // 路由：登录表单
-  if (url.pathname === '/' || url.pathname === '/login') {
+  // 路由：登录表单（只处理 GET，POST 交给下面的登录逻辑）
+  if ((url.pathname === '/' || url.pathname === '/login') && req.method === 'GET') {
     res.setHeader('Content-Type', 'text/html; charset=utf-8');
     res.end(
       page(
@@ -79,7 +79,11 @@ const server = http.createServer((req, res) => {
 
       // ① 登录成功：创建 Session（往档案柜里放一份档案）
       const newSid = crypto.randomUUID();
-      sessions.set(newSid, { username, loginAt: new Date().toISOString() });
+      sessions.set(newSid, {
+        username,
+        nickname: user.nickname,
+        loginAt: new Date().toISOString(),
+      });
 
       // ② 把档案编号塞给浏览器（Set-Cookie）
       res.setHeader('Set-Cookie', `sid=${newSid}; HttpOnly; Path=/`);
